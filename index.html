@@ -14,12 +14,24 @@
 
         }
         ul li a{
+            border: 1px solid gold;
 
-            color:red;
+            color:blueviolet;
         }
         div a{
             color:green;
         }
+        #exec-bio{
+            background-color: lightgray;
+        }
+        .bio-box{
+            border: 1px solid black;
+        }
+        #Istyle1{
+            background-color: orange;
+        }
+        .Cstyle1{
+            background-color: azure;        }
 
     </style>
 </head>
@@ -27,7 +39,7 @@
     <h1>I'm an h1</h1>
     <ul>
         <li>
-            <a href="https://example.com/" >Link</a>
+            <a id="Istyle1" href="https://example.com/" >Link</a>
         </li>
         <li>
             <a href="https://example.com" >Link</a>
@@ -38,19 +50,19 @@
     </ul>
     
     <h2>I'm an h2</h2>
-    <div>
+    <div id="exec-bio" class="bio-box">
     <a href="https://example.com">I'm a link</a>
     </div>
     
-    <div>
+    <div class="bio-box" class="Cstyle1">
         <a href="https://example.com/" >I'm a link</a>
 
     </div>
 
-    <div>
+    <div class="Cstyle1" class="bio-box">
         <a href="https://example.com/" >I'm a link</a>
     </div>
-    <div>
+    <div class="bio-box" class="Cstyle1">
         <a href="https://example.com/">I'm a link</a>
     </div>
 </body>
