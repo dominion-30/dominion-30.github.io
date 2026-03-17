@@ -4,64 +4,123 @@
     <meta charset="utf-8">
     <title>Test Page: Don't Panic</title>
     <style>
-          a {
-            color: #f542ef
-          }
+      /*Global styles*/
+      html, body{
+        margin:0;
+        padding: 0;
+      }
+      h1{
+        font-size: 7vw;
+        margin-top: 0;
 
-          .bio-box{
-            border: 1px solid #000;
-            width: 50%;
-            font-size: 1.5rem;
-            
-          }
+      }
+      a{
+        color: #f00;
+      }
 
-          .bio-box h3{
-            font-size: 1.5em;
-          }
-          .bio-copy{
-            font-size: 1em;
-          }
-          h1{
-            margin-top: 0;
-            font-size: 7vw;
-          }
-          h2{
-            font-size: 30px;
-          }
+      /*Hero Styles*/
+      .full-hero{
+        background-color: #c7dbfc;
+        height: 50vh;
+      }
+
+      /*Social Styles*/
+      .social-link{
+        background-color: rgba(150,150,150,0.5);
+        color:blue;
+        display: inline-block;
+        height: 36px;
+        border-radius:99px;
+        box-sizing: border-box;
+        padding-top: 0.85em;
+        color:#fff;
+        font-family: helvetica, aerial, sans;
+        font-weight: bold;
         
+        text-decoration: none;
+        font-size: 1em;
+        height: 2.5em;
+        width: 2.5em;
+        list-style:   1;
+        vertical-align:middle ;
+      }
+      .bio-box .social-link{
+        margin: auto;
+        max-width: 300px;
+        
+      } 
 
-          .bio-box  a{
-            color: #0b0
-          }
-          ul .social-link {
-            color: #00f;
-            background-color: rgba(150,150,150, 0.5);
-            
-          }
+      /*BIO STYLES*/
+      .bio-wrapper{
+        
+        font-size: 24px;
+        margin: 0 auto 2em;
+        max-width: 960px;
+        overflow: hidden;
+        
+        
+        
+      }
 
-           div .social-link{
-            background: rgba(150, 150, 150, 0,5);
-            color: blue;
-          }
-          .bio-wrapper{
-            font-size: 24px;
-          }
+      .bio-wrapper:after{
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+      }
 
-          .full-hero{
-            height: 50vh;
-            
-            background-color: #c7dbfc;
-            
-          }
+      .bio-box{
+        border: 2.5px dotted black;
+        
+        float: left;
+        font-size: 1rem;
+        padding: 0 2% 2%;
+        width: 23%;
+        box-sizing: border-box;
+        margin: 40px 1% 0;
+        border-color: rgba(0,0,0,0) #000 #000 rgba(0,0,0,0);
+      }
 
-          html, body{
-            margin: 0;
-            padding: 0;
-          }
+      .bio-box > a{
+        color: #c68bf9;
+      }
+         
+      .bio-box h3{
+        font-size: 1.5em;
+        color: #fff;
+        margin: -40px 0 1em;
+        text-align: center;
+      }
 
-          
+      .bio-box img{
+        width: 100%;
+      }
+
+      .bio-copy{
+        font-size: 1em;
+        line-height: 1.5;
+      }
+
+      .bio-copy a{
+        color: green;
+        padding: 20px;
+      }
+      /*.bio-wrapper + p{
+        clear: left;
+      }*/
+      .social-list {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
 
         
+      }
+        .social-list > li{
+          display: inline-block;
+          margin: 0 0.5em;
+        }
         </style>
 
 </head>
@@ -71,15 +130,15 @@
             
         </h1>
 
-        <ul>
+        <ul class="social-list">
             <li> 
-                <a href="https://example.com" id="link_color" class="social-link">Link</a>
+                <a href="https://example.com" id="link_color" class="social-link">Fb</a>
             </li>
             <li>
-                <a href="https://example.com" class="social-link" >Link</a>
+                <a href="https://example.com" class="social-link" >Tw</a>
             </li>
             <li>
-                <a href="https://example.com" class="social-link">Link</a>
+                <a href="https://example.com" class="social-link">Gh</a>
             </li>
         </ul>
         </div>
@@ -89,9 +148,10 @@
         <h2>I'm an h2</h2>
         <div class="bio-wrapper">
             <div class="bio-box">
+              <img src="kitten.jpg" alt="">
                 <h3>Michael Hartl</h3>
                 
-                <a href="https://twitter.com/mhartl" class="social-link" >here</a>
+                <a href="https://twitter.com/mhartl" class="social-link show " >here</a>
                 <div class="bio-copy">
                     <p>
                     Known for his dazzling charm, rapier wit, and unrivaled humility, Michael is the creator of <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> and the principal author of the <a href="https://learnenough.com/">Learn Enough to Be Dangerous</a> introductory sequence. Michael is also notorious as the founder of <a href="http://tauday.com/">Tau Day</a> and author of <a href="http://tauday.com/tau-manifesto"><em>The Tau Manifesto</em></a>, but rumors that's he's secretly a supervillain are slightly exaggerated.
@@ -101,6 +161,7 @@
             </div>
 
             <div class="bio-box">
+              <img src="kitten.jpg" alt="">
                 <h3>Lee Donahoe</h3>
                 <a href="https://twitter.com/leedonahoe" class="social-link" >here</a>
                 <div class="bio-copy">
@@ -113,6 +174,7 @@
             </div>
 
             <div class="bio-box">
+              <img src="kitten.jpg" alt="">
                 <h3>Nick Merwin</h3>
                 <a href="https://twitter.com/nickmerwin" class="social-link" >here</a>
                 <div class="bio-copy">
@@ -125,6 +187,7 @@
             </div>
 
             <div class="bio-box">
+              <img src="kitten.jpg" alt="">
                 <h3>??</h3>
                 <div class="bio-copy">
                      <p>
@@ -141,6 +204,23 @@
             
 
         </div>
+
+        <p>
+          Learn Enough to Be Dangerous is a leader in the movement to teach the world <em>technical sophistication</em>, which include both "hard skills" like coding, command lines, and version control, and "soft skills" like guessing keyboard shortcuts, Googling error messages, and knowing when to just reboot the darn thing.
+        </p>
+
+        <p>
+          We believe there are <strong>at least a billion people</strong> who can benefit from learning technical sophistication, probably more. To join our movement,
+          <a href="https://learnenough.com/#email_list">sign up for our official email list</a> now.
+        </p>
+
+        <h3>Background</h3>
+        <p>
+          Learn Enough to Be Dangerous is an outgrowth of the <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> and the <a href="https://www.softcover.io">Softcover publishing platform</a>. This page is part of the sample site for <a href="https://learnenough.com/css-tutorial"><em>Learn Enough CSS and Layout to Be Dangerous</em></a>, which teaches the basics of <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets, the language that allows web pages to be styled. Other related tutorials can be found at <a href="https://learnenough.com/">learnenough.com</a>
+        </p>
+
+
+       
             
     </body>
 </html>
