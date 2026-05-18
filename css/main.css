@@ -16,13 +16,18 @@
       }
 
       body{
-        font-family: helvetica,arial, sans;
+        font-family:'Open Sans' helvetica,arial, sans;
       }
       
       body{
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+      }
+
+      h1,h2,h3,h4,h5,h6{
+        font-family: 'Raleway', helvetica, sans;
+        font-weight: 100;
       }
       /*
       .content-container{
@@ -237,6 +242,7 @@
         background-image: url(../images/shark.jpg);
         
         background-position: center top;
+        
        
       }
 
@@ -270,12 +276,14 @@
         padding-top: 0.85em;
         color:#fff;
         font-family: helvetica, aerial, sans;
+        font-size: 1.7em;
         font-weight: bold;
-        
+        height: 1.5em;
+        padding-top: 0.25em;
         text-decoration: none;
         font-size: 1em;
-        height: 2.5em;
-        width: 2.5em;
+       
+        width: 1.5em;
         list-style:   1;
         vertical-align:middle ;
         
@@ -305,7 +313,10 @@
         background-color: #000;
         color: #fff;
         padding: 7vh 0;
+        
       }
+
+     
 
       .callout-title{
         font-size: 5.75vw;
@@ -357,9 +368,12 @@
       .bio-box h3{
         font-size: 1.5em;
         color: #fff;
+       
         margin: -40px 0 1em;
         text-align: center;
         text-transform: uppercase;
+        font-family:'Montserrat' ;
+        
       }
 
       .bio-box img{
